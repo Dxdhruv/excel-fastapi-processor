@@ -7,13 +7,13 @@ from fastapi.responses import JSONResponse
 
 app = FastAPI()
 
-processor = ExcelProcessor('Data/capbudg.xls')
+processor = ExcelProcessor('capbudg.xls')
 
 loaded_tables = {}
 
 @app.get("/")
 def read_root():
-    excel_path = 'Data/capbudg.xls'
+    excel_path = 'capbudg.xls'
     try:
         loaded_tables.update(pd.read_excel(excel_path, sheet_name=None))
         print("Excel file loaded successfully.")
