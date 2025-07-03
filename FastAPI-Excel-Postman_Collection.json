@@ -1,0 +1,71 @@
+{
+  "info": {
+    "name": "FastAPI Excel Processor",
+    "_postman_id": "a3f40e77-82cf-4ef5-bfb7-fake-id123456",
+    "description": "Collection for testing FastAPI Excel Processor endpoints",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "List Tables",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:9090/list_tables",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "9090",
+          "path": ["list_tables"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Table Details",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:9090/get_table_details?table_name=CapBudgWS",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "9090",
+          "path": ["get_table_details"],
+          "query": [
+            {
+              "key": "table_name",
+              "value": "CapBudgWS"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Row Sum",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:9090/row_sum?table_name=CapBudgWS&row_name=Initial Investment=",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "9090",
+          "path": ["row_sum"],
+          "query": [
+            {
+              "key": "table_name",
+              "value": "CapBudgWS"
+            },
+            {
+              "key": "row_name",
+              "value": "Initial Investment="
+            }
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
