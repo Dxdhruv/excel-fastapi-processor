@@ -11,7 +11,7 @@ This project is a FastAPI-based application designed to process and expose data 
 
 ---
 
-## 🚀 Setup Instructions
+## Setup Instructions
 
 ### 1. Clone the Repository
 
@@ -54,12 +54,12 @@ Example: If the row_name is "Tax Credit (if any )=" for a table where this row c
 {"table_name":"CapBudgWS","row_name":"Initial Investment","sum":62484.0}
 
 
-#Testing with Postman
+# Testing with Postman
 Base URL: http://localhost:9090
 Use the provided Postman collection: FastAPI-Excel-Postman-Collection.json
 Import into Postman and run each request
 
-##Potential Improvements
+## Potential Improvements
    - Enable handling multiple Excel files at once 
    - In the Streamlit UI, allow users to filter rows/columns by value range or string match before download.
    - Add a new endpoint for column-wise summary (sum, mean, std) — not just rows.
@@ -68,7 +68,7 @@ Import into Postman and run each request
    - Provide a Mini dashbord to track
    - Also can generate and give graphs to the user
 
-##Missed Edge Cases
+## Missed Edge Cases
    - Excel sheets may contain hidden data not visible to users but still parsed — needs detection.
    - Some Excel files may be in non-standard encodings, causing parsing failures.
    - Memory overflows or performance bottlenecks when parsing very large Excel files example more than 50 plus MBs
