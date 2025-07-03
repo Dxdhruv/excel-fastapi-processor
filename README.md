@@ -30,13 +30,13 @@ uvicorn main:app --reload --port 9090
 streamlit run streamlit_app.py
 
 API Endpoints
-GET /list_tables
+## a. GET /list_tables
 Description: Returns the names of all sheets in the Excel file.
 
 Response:
     {"tables":["CapBudgWS"]}
 
-b. GET /get_table_details
+## b. GET /get_table_details
 Parameters:
 table_name: str (Query parameter specifying the name of the table)
 Functionality: This endpoint should return the names of the rows for the selected table. These row names are typically the values found in the first column of that table.
@@ -44,7 +44,7 @@ Example: If the user selects the "Initial Investment" table, the API should list
 
 {"table_name":"CapBudgWS","row_names":["Equity Analysis of a Project","INITIAL INVESTMENT","Initial Investment=","Opportunity cost (if any)=","Lifetime of the investment","Salvage Value at end of project=","Deprec. method(1:St.line;2:DDB)=","Tax Credit (if any )=","Other invest.(non-depreciable)=","WORKING CAPITAL","Initial Investment in Work. Cap=","Working Capital as % of Rev=","Salvageable fraction at end=","GROWTH RATES","Revenues","Fixed Expenses","Default: The fixed expense growth rate is set equal to the growth rate in revenues by default.","INITIAL INVESTMENT","Investment"," - Tax Credit","Net Investment"," + Working Cap"," + Opp. Cost"," + Other invest.","Initial Investment","SALVAGE VALUE","Equipment","Working Capital","OPERATING CASHFLOWS","Lifetime Index","Revenues"," -Var. Expenses"," - Fixed Expenses","EBITDA"," - Depreciation","EBIT"," -Tax","EBIT(1-t)"," + Depreciation"," - ∂ Work. Cap","NATCF","Discount Factor","Discounted CF","Book Value (beginning)","Depreciation","BV(ending)"]}
 
-c. GET /row_sum
+## c. GET /row_sum
 Parameters:
 table_name: str (Query parameter specifying the name of the table)
 row_name: str (Query parameter specifying the name of the row, which must be one of the names returned by /get_table_details)
